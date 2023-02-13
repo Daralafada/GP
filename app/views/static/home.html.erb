@@ -1,24 +1,25 @@
 <h1 class="text-center">Bienvenue sur mon site de gossip pour le projet THP</h1>
 
 <body>
-	<h2 class="text-center">Voici la liste des gossip</h2>	
-		<div class="card-deck d-flex flex-wrap justify-content-around " style= "max-width: 1100px;">
+		<h4 class= "text-center mb-4"> Enjoy la lecture :) </h4>
+
+		<div class="card-deck d-flex flex-wrap justify-content-around ">
 				<% @gossips.each do |gossip| %>
-				<div class="card text-black bg-warning mb-3 text-center" style = "width:32%">
+				<div class="card text-black bg-warning mb-3 text-center" style = "width:23%">
 					<div class="card-header bg-white mb-1">Gossip n°<%= gossip.id%></div>
 			  		<div class="card-body">
 			   			<h6 class="card-subtitle mb-2 text-white"><%= gossip.title%></h6>
 			    		<p class="card-text"><%= gossip.content%></p>
-			    	<div class="card-footer position-absolute bottom-0 mt-4">
-			    		<a href=http://localhost:3000/gossip/<%= gossip.id%> class="btn btn-light px-5" role="button">Lien</a>
+			    	<div class="card-footer">
+			    		<a 
+			    			href=http://localhost:3000/gossip/<%= gossip.id%> 
+			    			class="btn btn-light px-5" 
+			    			role="button">
+			    			Lien</a>
 			    	</div>
 		    	</div>
 				</div>
-				<%	end%>
+				<%end%>
 			</div>
-		</div>
-
-		<div class="card-footer fixed-bottom">
-			<a href=# class="card-link text-black bg-white">Lien</a>
 		</div>
 </body>

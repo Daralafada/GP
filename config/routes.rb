@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'gossip/show'
   get '/home', to: 'static#home'
   get '/contact', to: 'static#contact'
   get '/team', to: 'static#team'

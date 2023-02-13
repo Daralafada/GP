@@ -1,12 +1,15 @@
-<h1>Gossip n°<%= params[:id_gossip] %></h1>
+<h1 class= "text-center mb-4 text-decoration-underline">Gossip n°<%= params[:id_gossip] %></h1>
 
 <body>
-	<h3>Voici le gossip</h3>
+	<h3 class= "text-center mb-4">Voici le gossip</h3>
 		<p> 
-			<br> L'auteur : <a href="/user/<%= @gossip.user.id %>"><%= @gossip.user.first_name%> <%= @gossip.user.last_name %> </a></br>
-			<br>Le titre : <%= @gossip.title %></br>
-			<br>Le contenu : <%= @gossip.content %></br>
-			<br>Créé le : <%= @gossip.created_at %> </br>
+			<br> 
+				<span class= "text-decoration-underline">L'auteur :</span> 
+				<a class= "text-decoration-none" href="/user/<%= @gossip.user.id %>"><%= @gossip.user.first_name%> <%= @gossip.user.last_name %> </a>
+			</br>
+			<br><span class= "text-decoration-underline">Le titre :</span> <%= @gossip.title %></br>
+			<br><span class= "text-decoration-underline">Le contenu :</span> <%= @gossip.content %></br>
+			<br><span class= "text-decoration-underline">Créé le :</span> <%= @gossip.created_at %> </br>
 		
 		</p>
 
