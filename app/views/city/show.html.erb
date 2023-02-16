@@ -1,0 +1,30 @@
+<h1 class="text-center"> <%= @city.name %></h1>
+
+<body>
+	<p>
+		<div class="card-deck d-flex flex-wrap justify-content-around ">
+				<% @city.users.each do |user| %>
+					<% user.gossips.each do |gossip| %>
+					<div class="card text-light bg-light mb-3 text-center" style = "width:23%">
+						<div class="card-header bg-dark mb-1"><%= user.first_name%> <%= user.last_name%></div>
+				  		<div class="card-body">
+				   			<h6 class="card-subtitle mb-2 text-dark" style="font-family: 'Amatic SC', cursive; font-size: 25px;"><%= gossip.title%></h6>
+				    		<p class="card-text text-truncate text-dark" style="font-family: 'Oooh Baby', cursive;"> <%= gossip.content%></p>
+				    	<div class="card-footer">
+				    		<a 
+				    			href=http://localhost:3000/gossip/<%= gossip.id%> 
+				    			class="btn btn-dark px-5" 
+				    			role="button">
+				    			Lire la suite</a>
+				    	</div>
+			    	</div>
+					</div>
+					<%end%>
+					<%end%>
+				</div>
+		</div>
+
+		
+	</p>
+
+</body>

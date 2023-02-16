@@ -1,0 +1,30 @@
+<h1 class="text-center">Nouveau Gossip</h1>
+
+<body>
+    <!-- ... -->
+
+    <%= form_tag url_for(:controller => 'gossip', :action => 'create'), :method => 'post' do %>
+
+      <%= label_tag "Titre" %>
+      <%= text_field_tag "title", nil %>
+      <br /> <br />
+
+      <%= label_tag "Gossip" %>
+      <%= text_area_tag "content", nil %>
+      <br /> <br />
+
+      <%= submit_tag "Créer un Gossip" %>
+
+      <% if @gossip.errors.any? %>
+        <p class="alert alert-warning" role="alert">Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+    <% end %>
+
+    <!-- ... -->
+</body>

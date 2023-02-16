@@ -1,0 +1,41 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+
+	<style>
+		h1, h4 {
+			font-family: 'Bebas Neue', cursive;
+		} 
+	</style>
+
+<h1 class="text-center">Bienvenue sur mon site de gossip pour le projet THP</h1>
+
+<body>
+	<div class="text-center">
+		<a href="<%= new_gossip_path %>" class="btn btn-warning px-5 justify-content-center" role="button">Créer un gossip</a>
+	</div>
+	<br> </br>
+		<h4 class= "text-center bg-dark text-light  mb-4"> Enjoy la lecture :) </h4>
+
+		<div class="card-deck d-flex flex-wrap justify-content-around ">
+				<% @gossips.each do |gossip| %>
+				<div class="card text-light bg-light mb-3 text-center" style = "width:23%">
+					<div class="card-header bg-dark mb-1">Gossip n°<%= gossip.id%></div>
+			  		<div class="card-body">
+			   			<h6 class="card-subtitle mb-2 text-dark" style="font-family: 'Amatic SC', cursive; font-size: 25px;"><%= gossip.title%></h6>
+			    		<p class="card-text text-truncate text-dark" style="font-family: 'Oooh Baby', cursive;"> <%= gossip.content%></p>
+			    	<div class="card-footer">
+			    		<a 
+			    			href=http://localhost:3000/gossip/<%= gossip.id%> 
+			    			class="btn btn-dark px-5" 
+			    			role="button">
+			    			Lire la suite</a>
+			    	</div>
+		    	</div>
+				</div>
+				<%end%>
+			</div>
+		</div>
+</body>

@@ -21,7 +21,7 @@ end
 20.times do |i|
 	Gossip.create!(
   user_id: User.all.sample.id,
-	title: Faker::Lorem.sentence,
+	title: Faker::Lorem.sentence(14),
 	content: Faker::Lorem.paragraph
   )
 end 

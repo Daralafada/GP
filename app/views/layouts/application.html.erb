@@ -8,6 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    
+    <style>
+    h1, h4 {
+      font-family: 'Bebas Neue', cursive;
+    } 
+    </style>
+
   </head>
 
   <body>
@@ -16,13 +27,15 @@
       background-size: contain; 
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-position: center;
       background-image: url(https://images.healthshots.com/healthshots/en/uploads/2021/08/13105537/gossiping-2-770x433.jpg)" class="bg-cover">
 
           <div class="container py-5 text-center">
-              <h1 class="display-4 text-black font-weight-bold bg-white mb-5">Gossip Project</h1>
-              <a href="http://localhost:3000/home" role="button" class="btn btn-light px-5">Accueil</a>
+              <h1 class="display-4 text-black font-weight-bold bg-white mb-5" style="font-family: 'Bebas Neue', cursive;">Gossip Project</h1>
+              <a href="http://localhost:3000/" role="button" class="btn btn-light px-5">Accueil</a>
               <a href="http://localhost:3000/team" role="button" class="btn btn-light px-5">Team</a>
               <a href="http://localhost:3000/contact" role="button" class="btn btn-light px-5">Contact</a>
+              <a href="http://localhost:3000/session/new" role="button" class="btn btn-light px-5">S'inscrire/Se connecter</a>
               
           </div>
       </div>

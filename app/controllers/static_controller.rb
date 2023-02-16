@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
-  def home
+  def index
     @gossips = Gossip.all
   end
 

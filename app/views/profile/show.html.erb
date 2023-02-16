@@ -1,10 +1,11 @@
-<h1> Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
+<h1 class="text-center"> Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
 
-<body>
+<body class="text-center">
 		<p> 
 			<br> <%= @user.description %></br>
 			<br>Age : <%= @user.age %></br>
-			<br>Ville  : <%= @user.city.name %> </br>
+			<br>Email : <%=@user.email %></br>
+			<br><a class= "text-decoration-none" href="/city/<%= @user.city.id %>"><%= @user.city.name%> </a></br>
 		
 		</p>
 

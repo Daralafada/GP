@@ -1,0 +1,53 @@
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class = "signup col-6">
+      <h4>S'inscrire</h4>
+
+      <%= form_for(@user) do |f| %>
+
+      <%= f.text_field :last_name, :placeholder => "Nom" %>
+      <br /> <br />
+
+      <%= f.text_field :first_name, :placeholder => "Prénom" %>
+      <br /> <br />
+
+      <%= f.text_field :email, :placeholder => "Email" %>
+      <br /> <br />
+
+      <%= f.text_field :password, :placeholder => "Mdp" %>
+      <br /> <br />
+
+      <%= f.text_field :password_confirmation, :placeholder => "Confirmer le mdp" %>
+      <br /> <br />
+
+      <%= f.submit "Créer un compte", class: "btn-submit" %>
+
+    <% end %>
+    </div>
+    <!-- ... -->
+
+    <div class = "login col-6">
+      <h4>Se connecter</h4>
+
+
+      <%= form_tag url_for(:controller => 'session', :action => 'create'), :method => 'post' do %>
+
+      <%= label_tag "Email" %>
+      <%= text_field_tag :email %>
+      <br /> <br />
+
+      <%= label_tag "Mot de passe" %>
+      <%= text_field_tag :password %>
+      <br /> <br />
+
+      <%= submit_tag "Se connecter" %>
+
+    <% end %>
+    </div>
+  </div>
+</div>
+    <!-- ... -->
+</body>
+
